@@ -50,25 +50,47 @@
       <p>We're getting the first Tommy Margarita gear ready. Join the list for launch news and new designs.</p>
 
       <!-- Replace the action URL with your form provider once created. -->
-  <form action="https://formspree.io/f/xaeydeva" method="POST">
-    <label class="sr-only" for="email">Email address</label>
-    <input id="email" name="email" type="email" placeholder="Your email address" required>
-    <button class="button" type="submit">Keep Me Posted</button>
-  </form>
-  
-  
+      <form action="https://formspree.io/f/xaeydeva" method="POST">
+        <label class="sr-only" for="email">Email address</label>
+        <input id="email" name="email" type="email" placeholder="Your email address" required>
+        <button class="button" type="submit">Keep Me Posted</button>
+      </form>
       <p class="form-note">No spam. Just Tommy Margarita stuff worth knowing about.</p>
     </section>
-<section class="section music">
-  <p class="eyebrow">THE TOMMY MARGARITA SOUNDTRACK</p>
-  <h2>Somewhere on the Way to the Lake</h2>
-  <p>Turn it up. You know where we're going.</p>
 
-  <audio controls>
-    <source src="somewhere-on-the-way-to-the-lake.mp3" type="audio/mpeg">
-    Your browser does not support the audio player.
-  </audio>
-</section>
+    <section class="section music" aria-labelledby="music-title">
+      <div class="music-card">
+        <img class="music-art" src="images/somewhere-on-the-way-to-the-lake%20album%20art.jpg" alt="Somewhere on the Way to the Lake album artwork" loading="lazy">
+        <div class="music-details">
+          <p class="eyebrow">THE TOMMY MARGARITA SOUNDTRACK</p>
+          <h2 id="music-title">Somewhere on the Way to the Lake</h2>
+          <p class="music-artist">Tommy Margarita</p>
+          <audio id="music-audio" preload="metadata">
+            <source src="somewhere-on-the-way-to-the-lake.mp3" type="audio/mpeg">
+            Your browser does not support audio playback.
+          </audio>
+          <div class="music-controls">
+            <button class="play-button" id="play-button" type="button" aria-label="Play Somewhere on the Way to the Lake" aria-pressed="false">
+              <span id="play-icon" aria-hidden="true">▶</span>
+            </button>
+            <div class="track-controls">
+              <label class="sr-only" for="track-progress">Song progress</label>
+              <input class="track-progress" id="track-progress" type="range" min="0" max="100" value="0" step="0.1" aria-valuetext="0:00">
+              <div class="time-row">
+                <span id="current-time">0:00</span>
+                <span id="total-time">0:00</span>
+              </div>
+            </div>
+          </div>
+          <div class="volume-row">
+            <label for="volume-control">Volume</label>
+            <input class="volume-control" id="volume-control" type="range" min="0" max="1" value="0.8" step="0.01">
+          </div>
+        </div>
+      </div>
+      <p class="music-caption">Turn it up. You know where we're going.</p>
+    </section>
+
     <section class="section fishing">
       <p class="eyebrow">FOR THE FISHERMEN</p>
       <h2>Check the fishing score.</h2>
